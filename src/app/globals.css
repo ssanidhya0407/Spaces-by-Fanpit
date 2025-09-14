@@ -1,0 +1,144 @@
+/* Blinker font faces */
+@font-face {
+  font-family: 'Blinker';
+  src: url('/Blinker-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/Blinker-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/Blinker-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/Blinker-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/Blinker-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/Blinker-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/Blinker-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@import "tailwindcss";
+
+:root {
+  --background: linear-gradient(135deg, #f8f9ff 0%, #f3f0ff 100%);
+  --foreground: #171717;
+  --accent: #8f5aff;
+  --accent-secondary: #a259ff;
+  --accent-gradient: linear-gradient(90deg, #8f5aff 0%, #a259ff 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Blinker', Arial, Helvetica, sans-serif;
+}
+
+.font-sans, .min-h-screen, .bg-white, .bg-gray-50 {
+  font-family: 'Blinker', Arial, Helvetica, sans-serif !important;
+}
+
+/* Accent color */
+:root {
+  --accent: #A259FF;
+}
+
+a, button, [role="button"]:focus {
+  outline-color: var(--accent);
+}
+
+.btn-primary, .accent {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.tag-conference {
+  background: #e6e6ff;
+  color: #8f5aff;
+}
+.tag-workshop {
+  background: #e6ffe6;
+  color: #5aff8f;
+}
+.tag-meetup {
+  background: #f0f8ff;
+  color: #59a2ff;
+}
+.tag-social {
+  background: #f8e6ff;
+  color: #ff5ad1;
+}
+.tag-business {
+  background: #e6f0ff;
+  color: #5a8fff;
+}
+.tag-entertainment {
+  background: #fff3e6;
+  color: #ff8f5a;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
